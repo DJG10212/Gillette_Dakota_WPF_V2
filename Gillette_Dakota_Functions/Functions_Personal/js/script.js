@@ -27,6 +27,15 @@ while(isNaN(showerTime) || showerTime==="") {
 	showerTime = prompt("Please enter a number! Thanks!");
 }
 
+//starting the function
+calcCost (showerTime, waterCost);
+
+function calcCost (showerTime, waterCost){
+	
+	
+	
+}
+
 
 
 
