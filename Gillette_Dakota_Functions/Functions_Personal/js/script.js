@@ -21,6 +21,13 @@ while(isNaN(waterCost) || waterCost==="") {
 //ask the user their average shower length
 var showerTime = prompt("What is the average amoount of minutes you spend in the shower? ( example: 10 )");
 
+//validate the prompt. Checks if it is blank, and if it is a number
+while(isNaN(showerTime) || showerTime==="") {
+	
+	showerTime = prompt("Please enter a number! Thanks!");
+}
+
+
 
 
 
