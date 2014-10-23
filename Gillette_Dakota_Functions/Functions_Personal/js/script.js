@@ -32,15 +32,18 @@ calcCost (showerTime, waterCost);
 
 function calcCost (showerTime, waterCost){
 	//calculate the water used. average showerhead uses 2.5 gallons of water a minute
-	var waterUsed = showerTime * 2.5
+	var waterUsed = showerTime * 2.5;
 	//calculate the cost per gallon
-	var costPerGallon = waterCost / 1000
+	var costPerGallon = waterCost / 1000;
 	//calculate the total cost
-	var totalCost = waterUsed * costPerGallon
-	
+	var totalCost = waterUsed * costPerGallon;
+	//return total cost
+	return totalCost;
 	
 }
 
+
+console.log ("Your total cost per " +showerTime+ " minute shower is $" +totalCost+ "!");
 
 
 
