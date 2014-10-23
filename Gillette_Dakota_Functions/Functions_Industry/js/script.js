@@ -1,46 +1,17 @@
 /*
 Dakota Gillette
-WPF Section 01
-Assignment: Conditionals Industry
+WPF Section Functions Industry
 10-16-2014
 */
 
 
-//Calculate the total hours worked, and how much money was earned
+//ask the user their water cost
+var state = prompt("The top 3 average Web Developer salries are in Washington, California, and Maryland. If you were a web developer looking to move to one of these states, which one would you choose?");
 
-//ask the user what their hourly rate of pay is
-
-var hourlyRate = prompt("What is your hourly rate of pay? (example: 10.19)");
-var hourlyRate = parseInt(hourlyRate);
-
-//ask user how many hours they worked each day
-var monday = prompt("How many hours did you work on Monday? (example: 9)");
-var monday = parseInt(monday);
-
-var tuesday = prompt("How many hours did you work on Tuesday? (example: 9)");
-tuesday = parseInt(tuesday);
-
-var wednesday = prompt("How many hours did you work on Wednesday? (example: 9)");
-wednesday = parseInt(wednesday);
-
-var thursday = prompt("How many hours did you work on Thursday? (example: 9)");
-thursday = parseInt(thursday);
-
-var friday = prompt("How many hours did you work on Friday? (example: 9)");
-friday = parseInt(friday);
+//validate the prompt. Checks if it is blank, and if it is a number
+while (state === "") {
+    state = prompt("Please enter either: Washington, California, or Maryland");
+}
 
 
-//calculate total hours worked
-var totalHours = monday + tuesday + wednesday + thursday + friday;
-
-if (totalHours > 40) {
-	//calculate total amount earned
-	var overTime = totalHours * 1.5
-	alert("It looks like you worked " +totalHours+ " hours this week, and earned $" +overTime+ "! Good job!");}
-	
-else {
-	//calculate total amount earned
-var moneyEarned = totalHours * hourlyRate
-	alert("It looks like you worked " +totalHours+ " hours this week, and earned $" +moneyEarned+ "! Good job!");}
-
-
+if (state == Maryland
