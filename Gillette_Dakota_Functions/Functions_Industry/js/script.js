@@ -42,11 +42,23 @@ if (state == 1) {
 	
 	//ask the user their salary
 	var yearlySalary = prompt("Congrats on choosing California! What is your yearly salary? Please enter the number only, no commas.");
-
-	//validate the prompt. Checks if it is blank, and if it is a number
+//validate the prompt. Checks if it is blank, and if it is a number
 	while (isNaN(yearlySalary) || yearlySalary === "") {
-    yearlySalary = prompt("Please enter a number! Do not include the dollar sign or commas. Thanks!");
+    yearlySalary = prompt("Please enter a number! Do not include the dollar sign or commas. Thanks!");}
+	//average salary in California
+	var californiaAverageSalary = 51910;
+	//average web developer pay in MD
+    var webDevPay = 107993
+	//defining variables
+	var differenceOfPay = calcPay (yearlySalary, webDevPay);
+	//starting function
+	function calcPay (yearlySalary, webDevPay){
+		morePay = Number(webDevPay) - Number(yearlySalary);
+			return morePay
 	}
+	//calculate how much more you will make than the average MD worker
+	var moreThan = Number(webDevPay) - Number(californiaAverageSalary);
+	alert("If you work as a web developer in California, you will make $" + moreThan + " more than the average yearly salary in Maryland. You will make $" + differenceOfPay + " more than your current job. What are you waiting for?! Move!!")
 }
 else {
 	
