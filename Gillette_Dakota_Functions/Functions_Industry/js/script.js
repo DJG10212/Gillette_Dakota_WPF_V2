@@ -24,8 +24,20 @@ if (state == "Maryland") {
     yearlySalary = prompt("Please enter a number! Do not include the dollar sign or commas. Thanks!");
 	}
 	//average salary in Maryland
-	var marylandSalary = 51860;
-	var total = CalcPay (yearlySalary, marylandSalary);
+	var marylandAverageSalary = 51860;
+	//average web developer pay in MD
+	var webDevPay = 104934
+	
+	//defining variables
+	var total = CalcPay (yearlySalary, marylandAverageSalary, webDevPay);
+	//starting function
+	function calcPay (yearlySalary, marylandAverageSalary, webDevPay){
+		
+
+	
+		
+	}
+	
 	
 
 }else if (state == "California") {
