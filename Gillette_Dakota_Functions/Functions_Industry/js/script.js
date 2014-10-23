@@ -14,7 +14,7 @@ while (isNaN(state) || state === "") {
 	}
 
 
-if (state == 1) {
+if (state === 1) {
 	//ask the user their salary
 	var yearlySalary = prompt("Congrats on choosing Maryland! What is your yearly salary? Please enter the number only, no commas.");
 
@@ -38,7 +38,7 @@ if (state == 1) {
 	
 
 
-}else if (state == 2) {
+}else if (state === 2) {
 	
 	//ask the user their salary
 	var yearlySalary = prompt("Congrats on choosing California! What is your yearly salary? Please enter the number only, no commas.");
@@ -61,14 +61,23 @@ if (state == 1) {
 	alert("If you work as a web developer in California, you will make $" + moreThan + " more than the average yearly salary in Maryland. You will make $" + differenceOfPay + " more than your current job. What are you waiting for?! Move!!")
 }
 else {
-	
 	//ask the user their salary
 	var yearlySalary = prompt("Congrats on choosing Washington! What is your yearly salary? Please enter the number only, no commas.");
-
-	//validate the prompt. Checks if it is blank, and if it is a number
+//validate the prompt. Checks if it is blank, and if it is a number
 	while (isNaN(yearlySalary) || yearlySalary === "") {
-    yearlySalary = prompt("Please enter a number! Do not include the dollar sign or commas. Thanks!");
-}
-
-	
+    yearlySalary = prompt("Please enter a number! Do not include the dollar sign or commas. Thanks!");}
+	//average salary in Washington
+	var washingtonAverageSalary = 52945;
+	//average web developer pay in MD
+    var webDevPay = 109244
+	//defining variables
+	var differenceOfPay = calcPay (yearlySalary, webDevPay);
+	//starting function
+	function calcPay (yearlySalary, webDevPay){
+		morePay = Number(webDevPay) - Number(yearlySalary);
+			return morePay
+	}
+	//calculate how much more you will make than the average MD worker
+	var moreThan = Number(webDevPay) - Number(washingtonAverageSalary);
+	alert("If you work as a web developer in California, you will make $" + moreThan + " more than the average yearly salary in Maryland. You will make $" + differenceOfPay + " more than your current job. What are you waiting for?! Move!!")
 }
