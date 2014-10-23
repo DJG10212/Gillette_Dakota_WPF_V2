@@ -17,6 +17,14 @@ while (isNaN(waterCost) || waterCost === "") {
     waterCost = prompt("Please enter a number! Do not include the dollar sign. Thanks!");
 }
 
+//alert if they are paying too much for their water, or not
+costAlert = (waterCost < 2 ) ? "You are paying less than the national average for water! Congrats!" : "You are paying more than the national average for water!";
+//alert user of the outcome!
+alert (costAlert);
+
+
+
+
 //ask the user their average shower length
 var showerTime = prompt("What is the average amoount of minutes you spend in the shower? ( example: 10 )");
 
