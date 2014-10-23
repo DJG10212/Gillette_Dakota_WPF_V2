@@ -38,7 +38,7 @@ function calcCost (showerTime, waterCost){
 	//return total cost
     return totalCost;
 }
-console.log("Your total cost per " +showerTime+ " minute shower is $" +calcCost+ "!");
+alert("Your total cost per " + showerTime + " minute shower is $" + total + "!");
 
 
 
