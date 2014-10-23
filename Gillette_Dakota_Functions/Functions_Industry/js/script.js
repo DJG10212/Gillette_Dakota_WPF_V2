@@ -26,15 +26,15 @@ if (state == 1) {
 	//average web developer pay in MD
     var webDevPay = 104934
 	//defining variables
-	var differenceOfPay = CalcPay (yearlySalary, webDevPay);
+	var differenceOfPay = calcPay (yearlySalary, webDevPay);
 	//starting function
 	function calcPay (yearlySalary, webDevPay){
-		morePay = Number(yearlySalary) - Number(webDevPay);
+		morePay = Number(webDevPay) - Number(yearlySalary);
 			return morePay
 	}
 	//calculate how much more you will make than the average MD worker
 	var moreThan = Number(webDevPay) - Number(marylandAverageSalary);
-alert("If you work as a web developer in Maryland, you will make $" + moreThan + " more than the average yearly salary in Maryland. You will make $" + differenceOfPAy + " more than your current job. What are you waiting for?! Move!!")
+	alert("If you work as a web developer in Maryland, you will make $" + moreThan + " more than the average yearly salary in Maryland. You will make $" + differenceOfPay + " more than your current job. What are you waiting for?! Move!!")
 	
 
 
