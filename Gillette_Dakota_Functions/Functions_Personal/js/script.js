@@ -26,19 +26,29 @@ alert (costAlert);
 
 
 //ask the user their average shower length
-var showerTime = prompt("What is the average amoount of minutes you spend in the shower? ( example: 10 )");
+var showerTime = prompt("What is the average amount of minutes you spend in the shower? ( example: 10 )");
 
 //validate the prompt. Checks if it is blank, and if it is a number
 while (isNaN(showerTime) || showerTime === "") {
     showerTime = prompt("Please enter a number! Thanks!");
 }
 
+//ask the user how many showers they take a week
+var showersPerWeek = prompt("On average, how many showers do you take per week? ( example: 10 )");
+
+//validate the prompt. Checks if it is blank, and if it is a number
+while (isNaN(showersPerWeek) || showersPerWeek === "") {
+    showersPerWeek = prompt("Please enter a number! Thanks!");
+}
+
 //defining variable
-var total = calcCost (showerTime, waterCost);
+var total = calcCost (showerTime, waterCost, showersPerWeek);
 //starting the function
-function calcCost (showerTime, waterCost){
+function calcCost (showerTime, waterCost, showersPerWeek){
 	//calculate the water used. average showerhead uses 2.5 gallons of water a minute
-    var waterUsed = showerTime * 2.5;
+    var totalTime = showerTime * showersPerWeek
+	//calculate water used
+	var waterUsed = totalTime * 2.5	
 	//calculate the cost per gallon
     var costPerGallon = waterCost / 1000;
 	//calculate the total cost
@@ -46,7 +56,13 @@ function calcCost (showerTime, waterCost){
 	//return total cost
     return totalCost;
 }
-alert("Your total cost per " + showerTime + " minute shower is $" + total + "!");
+
+//calculate cost per shower
+var costPerShower = total / showersPerWeek
+
+var final = total * showersPerWeek
+
+alert("Your total cost per " + showerTime + " minute shower is $" + costPerShower + "! You spend a total of $" + final + "per week on shower water!");
 
 
 
