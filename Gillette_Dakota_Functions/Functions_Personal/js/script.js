@@ -10,7 +10,7 @@ Assignment: Functions Personal
 alert ("We will be asking you questions in order to calculate your water cost/usage from taking showers.");
 
 //ask the user their water cost
-var waterCost = prompt("What is you cost of water per 1000 gallons used? The national average is $2 per 1000 gallons. (please enter a number only. example 2.12 )");
+var waterCost = prompt("What is you cost of water per 1000 gallons used? The national average is $2 per 1000 gallons. ( please enter a number only. example 2.12 )");
 
 //validate the prompt. Checks if it is blank, and if it is a number
 while(isNaN(waterCost) || waterCost==="") {
@@ -31,7 +31,12 @@ while(isNaN(showerTime) || showerTime==="") {
 calcCost (showerTime, waterCost);
 
 function calcCost (showerTime, waterCost){
-	
+	//calculate the water used. average showerhead uses 2.5 gallons of water a minute
+	var waterUsed = showerTime * 2.5
+	//calculate the cost per gallon
+	var costPerGallon = waterCost / 1000
+	//calculate the total cost
+	var totalCost = waterUsed * costPerGallon
 	
 	
 }
